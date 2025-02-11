@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milestone #1</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container" id="loginPage">
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <button onclick="login()">Login</button>
+        <button onclick="showPage('createAccountPage')">Create Account</button>
+    </div>
+
+    <div class="container" id="createAccountPage" style="display:none;">
+        <h2>Create Account</h2>
+        <input type="text" placeholder="New Username">
+        <input type="password" placeholder="New Password">
+        <button onclick="showPage('loginPage')">Sign Up</button>
+    </div>
+
+    <div class="container" id="homePage" style="display:none;">
+        <h2>Home</h2>
+        <p>Welcome! Choose an option:</p>
+        <button onclick="showPage('inventoryPage')">Go to Inventory</button>
+        <button onclick="showPage('loginPage')">Logout</button>
+    </div>
+
+    <div class="container" id="inventoryPage" style="display:none;">
+        <h2>Inventory</h2>
+        <p>Here you can view available items.</p>
+        <button onclick="showPage('homePage')">Back</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
