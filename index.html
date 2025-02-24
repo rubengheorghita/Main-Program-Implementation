@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milestone #1</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container" id="loginPage">
+        <h2>Login</h2>
+        <p>Logging in gives you access to your account and inventory features.</p>
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <button onclick="login()">Login</button>
+        <button onclick="showPage('createAccountPage')">Create Account</button>
+    </div>
+
+    <div class="container" id="createAccountPage" style="display:none;">
+        <h2>Create Account</h2>
+        <input type="text" placeholder="New Username">
+        <input type="password" placeholder="New Password">
+        <button onclick="showPage('loginPage')">Sign Up</button>
+    </div>
+
+    <div class="container" id="homePage" style="display:none;">
+        <h2>Home</h2>
+        <p>Welcome! Choose an option:</p>
+        <input type="text" placeholder="Search Inventory">
+        <button onclick="showPage('inventoryPage')">Go to Inventory</button>
+        <button onclick="confirmLogout()">Logout</button>
+    </div>
+
+    <div class="container" id="inventoryPage" style="display:none;">
+        <h2>Inventory</h2>
+        <button onclick="showInventoryDetails()">View Inventory</button>
+        <div id="inventoryDetails" style="display:none;">
+            <p>Item 1 - Laptop</p>
+            <p>Item 2 - Phone</p>
+            <p>Item 3 - Tablet</p>
+        </div>
+        <button onclick="showPage('homePage')">Back</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
